@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.LLEditPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="Vector" BackgroundColor="Transparent" Margin="10,5,5,5" Clicked="PersonalDetailsPage"></ImageButton>
+                <Label Text="Edit" FontFamily="poppins" TextColor="#223A66" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" Margin="0,10,20,10"/>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="ProfileGirl" Margin="20" ></Image>
+                        <Button Text="Add Photo" x:Name="LLprofileChng" Clicked="AddPic1" BackgroundColor="Transparent" FontFamily="poppins" TextColor="#223A66" ></Button>
+                    </StackLayout>
+
+                    <Frame CornerRadius="15" Padding="15" Margin="30,5,30,5" BackgroundColor="#F1F1F1">
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="user" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Name" TextColor="#223A66" FontSize="Small" FontFamily="poppins"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="LLNameLabel"  TextColor="#223A66" FontSize="Micro" FontFamily="poppins"></Label>
+                                <Entry Placeholder="Enter new Phone No" x:Name="LLNameEntry" IsVisible="False"></Entry>
+                            </StackLayout>
+                            <Button Text="Change Name" TextColor="#223A66" Clicked="nameChange" x:Name="LLNameChng" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" FontSize="12" FontFamily="poppins"></Button>
+                            <Image x:Name="LLNameCheckedIcon" IsVisible="False" Source="checked" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="nameChange"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15" Margin="30,5,30,5" BackgroundColor="#F1F1F1">
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="email" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Email" TextColor="#223A66" FontSize="Small" FontFamily="poppins"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="LLEmailLabel" TextColor="#223A66" FontSize="Micro" FontFamily="poppins"></Label>
+                                <Entry Placeholder="Enter new Phone No" x:Name="LLEmailEntry" IsVisible="False"></Entry>
+                            </StackLayout>
+                            <Button Text="Change Email" TextColor="#223A66" x:Name="LLEmailChng" Clicked="emailChange" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" FontSize="12" FontFamily="poppins"></Button>
+                            <Image x:Name="LLEmailCheckedIcon" IsVisible="False" Source="checked" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="emailChange"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15" Margin="30,5,30,5" BackgroundColor="#F1F1F1">
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="phone" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Phone no" TextColor="#223A66" FontSize="Small" FontFamily="poppins"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="LLPhoneLabel" TextColor="#223A66" FontSize="Micro" FontFamily="poppins"></Label>
+                                <Entry Placeholder="Enter new Phone No" x:Name="LLPhoneEntry" IsVisible="False"></Entry>
+                            </StackLayout>
+                            <Button Text="Change Phone" TextColor="#223A66" x:Name="LLPhoneChng" Clicked="phoneNoChange" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" FontSize="12" FontFamily="poppins"></Button>
+                            <Image x:Name="LLPhoneCheckedIcon" IsVisible="False" Source="checked" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="phoneNoChange"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15" Margin="30,5,30,5" BackgroundColor="#F1F1F1">
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="calendar" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="DOB" TextColor="#223A66" FontSize="Small" FontFamily="poppins"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="LLDOBLabel"  TextColor="#223A66" FontSize="Micro" FontFamily="poppins"></Label>
+                                <DatePicker x:Name="LLDOBEntry" IsVisible="False"></DatePicker>
+                            </StackLayout>
+                            <Button Text="Change DOB" TextColor="#223A66" x:Name="LLDOBChng" Clicked="dobChange" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" FontSize="12" FontFamily="poppins"></Button>
+                            <Image x:Name="LLDOBCheckedIcon" IsVisible="False" Source="checked" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="dobChange"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15" Margin="30,5,30,5" BackgroundColor="#F1F1F1">
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="placeholder" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Address" TextColor="#223A66" FontSize="Small" FontFamily="poppins"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="LLADDLabel" TextColor="#223A66" FontSize="Micro" FontFamily="poppins"></Label>
+                                <Entry Placeholder="Enter new Phone No" x:Name="LLAddEntry" IsVisible="False"></Entry>
+                            </StackLayout>
+                            <Button Text="Change Address" TextColor="#223A66" x:Name="LLAddChng" Clicked="addressChange" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" FontSize="12" FontFamily="poppins"></Button>
+                            <Image x:Name="LLAddCheckedIcon" IsVisible="False" Source="checked" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="addressChange"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15" Margin="30,5,30,5" BackgroundColor="#F1F1F1">
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="password" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Password" TextColor="#223A66" FontSize="Small" FontFamily="poppins"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="LLPassLabel" TextColor="#223A66" FontSize="Micro" FontFamily="poppins"></Label>
+                                <Entry Placeholder="Enter new Phone No" x:Name="LLPassEntry" IsVisible="False"></Entry>
+                            </StackLayout>
+                            <Button Text="Change Password"  Clicked="pwordChange" x:Name="LLPassChng" TextColor="#223A66" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" FontSize="12" FontFamily="poppins"></Button>
+                            <Image x:Name="LLPassCheckedIcon" IsVisible="False" Source="checked" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="EndAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="pwordChange"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

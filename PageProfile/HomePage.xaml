@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.HomePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout  >
+            <Grid HorizontalOptions="FillAndExpand" Margin="10,5,10,5">
+
+                <StackLayout Margin="20,20,10,10" HorizontalOptions="Start">
+                    <ImageButton Source="hamburger" HeightRequest="40" Clicked="menu"  BackgroundColor="Transparent" >
+                        <ImageButton.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,20,10,10">
+                    <ImageButton Source="profilegirl" HeightRequest="60" Clicked="nextProfilePage" BackgroundColor="White"></ImageButton>
+                </StackLayout>
+            </Grid>
+
+            <Frame Padding="0" Margin="30,5,30,5 " BorderColor="#C17FFB" CornerRadius="10" HasShadow="True" HeightRequest="40"  >
+
+                <StackLayout Orientation="Horizontal" Spacing="20">
+
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/54/54481.png" HeightRequest="20" Margin="20,0,0,0"  HorizontalOptions="Start" ></Image>
+                    <Label Text="Search" VerticalOptions="Center" FontSize="Small" ></Label>
+                </StackLayout>
+
+            </Frame>
+
+
+
+            <ListView  x:Name="CList" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame Padding="10" BorderColor="White" Margin="10" CornerRadius="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ParkingDetails_Clicked"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding LandCoverPhoto}" HeightRequest="150"  WidthRequest="150"  ></Image>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical" Margin="30,0,0,0" >
+                                        <Label Text="{Binding LandName}" TextColor="Black">
+
+                                        </Label>
+                                        <Label Text="{Binding PriceForHours}" TextColor="Black">
+
+                                        </Label>
+                                        <Label Text="{Binding AvailableSlots}" TextColor="Black">
+
+                                        </Label>
+                                        <Image Source=" "></Image>
+                                        <Label Text="{Binding LandAddLn1}" TextColor="Black">
+                                        </Label>
+                                        <Image Source=" "></Image>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding PriceForDays}" TextColor="Black" HorizontalOptions="StartAndExpand" ></Label>
+                                            <Image Source=" "></Image>
+                                            <Label Text="{Binding Ratings}" HorizontalOptions="EndAndExpand" TextColor="Black"></Label>
+
+
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.Verify"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Verification code" FontAttributes="Bold" TextColor="#223A66"  HorizontalOptions="CenterAndExpand" Margin="0,150,0,0"></Label>
+
+            <Image Source="otp" HeightRequest="150" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" ></Image>
+            <Grid HorizontalOptions="FillAndExpand" Margin="50,30,50,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" Padding="0">
+                    <Entry x:Name="OTP1" Keyboard="Numeric" ReturnType="Next" TextChanged="OTP1_TextChanged" MaxLength="1"></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" Grid.Column="1" Grid.Row="0" Margin="0,0,0,0" Padding="0">
+                    <Entry x:Name="OTP2" Keyboard="Numeric" ReturnType="Next" TextChanged="OTP2_TextChanged" MaxLength="1"></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" Grid.Column="2" Grid.Row="0" Margin="0,0,0,0" Padding="0">
+                    <Entry x:Name="OTP3" Keyboard="Numeric" ReturnType="Next" TextChanged="OTP3_TextChanged" MaxLength="1"></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" Grid.Column="3" Grid.Row="0" Margin="0,0,0,0" Padding="0">
+                    <Entry x:Name="OTP4" Keyboard="Numeric" ReturnType="Next" TextChanged="OTP4_TextChanged" MaxLength="1"></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0" Padding="0">
+                    <Entry x:Name="OTP5" Keyboard="Numeric" ReturnType="Next" TextChanged="OTP5_TextChanged" MaxLength="1"></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" Grid.Column="5" Grid.Row="0" Margin="0,0,0,0" Padding="0">
+                    <Entry x:Name="OTP6" Keyboard="Numeric" ReturnType="Done" TextChanged="OTP6_TextChanged" MaxLength="1"></Entry>
+                </Frame>
+
+            </Grid>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Resend code " Margin="50,30,50,0" HorizontalOptions="StartAndExpand" TextColor="#223A66" IsVisible="False" x:Name="resendCode"></Label>
+                <ProgressBar x:Name="OTPProgress" ProgressColor="#223A66" HorizontalOptions="FillAndExpand"></ProgressBar>
+                <Label Text="" Margin="50,30,50,0" TextColor="#223A66" x:Name="TimerLabel" ></Label>
+            </StackLayout>
+            <Button Text="Use Instead Email " Margin="40,0,50,0" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" TextTransform="None" TextColor="#223A66" ></Button>
+
+            <Button Text="Verify" Clicked="verify1" BackgroundColor="#C17FFB" TextColor="#223A66" Margin="60,30,60,0"  CornerRadius="15" FontSize="Micro" ></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

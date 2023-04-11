@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.ParkingDetails"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="15,20,0,0">
+            <ImageButton Source="Vector" BackgroundColor="Transparent" HorizontalOptions="Start" WidthRequest="20" Clicked="LLhome"></ImageButton>
+            <Label Text="Happy Camper Lot" TextColor="#223A66"  HorizontalTextAlignment="Start" Margin="30,0,0,0" HorizontalOptions="StartAndExpand" FontSize="26" FontAttributes="Bold" FontFamily="Roboto"/>
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Ammapalayam,Salem" FontSize="16" FontFamily="roboto" Margin="70,0,0,0">
+                
+            </Label>
+            <Image Source="ratings" HeightRequest="14" Margin="50,0,0,0">
+            </Image>
+            <Label Text="3.5" FontFamily="roboto">
+                
+            </Label>
+            
+        </StackLayout>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent" Padding="10">
+               
+                    
+                
+                <CarouselView Margin="10" IndicatorView="Indicator" x:Name="Carousel" HeightRequest="200">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Url}" Aspect="AspectFill"></Image>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+
+
+                </CarouselView>
+                <IndicatorView IndicatorColor="Gray" SelectedIndicatorColor="#C17FFB" x:Name="Indicator" IndicatorsShape="Square" IndicatorSize="10">
+
+                </IndicatorView>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Frame CornerRadius="10" BackgroundColor="#4E4C7D" Grid.Row="0" Grid.Column="1" Padding="0">
+                        <StackLayout>
+                            <Label Text="Distance" FontSize="12" FontFamily="roboto" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Image Source="distance"></Image>
+                                <Label Text="2km" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand"  FontFamily="roboto"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame CornerRadius="10" BackgroundColor="#4E4C7D" Grid.Row="0" Grid.Column="2" Padding="0">
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Label Text="Available slot" FontSize="12" FontAttributes="Bold" TextColor="White" FontFamily="roboto" HorizontalTextAlignment="Center"></Label>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Image Source="slot"></Image>
+                                <Label Text="9" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand" FontFamily="roboto"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame  CornerRadius="10" BackgroundColor="#4E4C7D" Grid.Row="0" Grid.Column="3" Padding="0">
+                        <StackLayout>
+                            <Label Text="Bare Fare" FontSize="12" FontFamily="roboto" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Image Source="rupee"></Image>
+                                <Label Text="40.00/hr" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand" FontFamily="roboto"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Frame>
+                </Grid>
+
+                <StackLayout Orientation="Horizontal" Spacing="15" Margin="50,20,50,20">
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="hours"></Image>
+                        <Label Text="24/7"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="securitycamera"></Image>
+                        <Label Text="CCTV"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="fireextinguisher"></Image>
+                        <Label Text="Fire Extinguisher"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Image Source="cellphone"></Image>
+                        <Label Text="Cash"></Label>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Packages" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="20,20,0,0">
+                        
+                    </Label>
+
+                    <CarouselView Margin="10" IndicatorView="Indicator1" x:Name="Caro" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Url}" Aspect="AspectFill"></Image>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+
+
+                    </CarouselView>
+                    <IndicatorView IndicatorColor="Gray" SelectedIndicatorColor="#C17FFB" x:Name="Indicator1" IndicatorsShape="Square" IndicatorSize="10">
+
+                    </IndicatorView>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0"  >
+                    <Button Text="Book for Hours" FontFamily="roboto" TextColor="White" Margin="20,0,10,0" WidthRequest="140" CornerRadius="10" Clicked="HoursBook" BackgroundColor="#4E4C7D" ></Button>
+                    <Button Text="Book for Days"  FontFamily="roboto" TextColor="White" Margin="10,0,20,0" WidthRequest="140" CornerRadius="10" Clicked="DaysBook" BackgroundColor="#4E4C7D"></Button>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

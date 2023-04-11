@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.personaldetails"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+         <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="Vector" HeightRequest="20" WidthRequest="20" Aspect="AspectFit" BackgroundColor="Transparent" Margin="10,20,5,5" Clicked="PrevProfilePage"></ImageButton>
+                <Label Text="Personal Details" FontFamily="Roboto" TextColor="#223A66" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="24" Margin="0,40,20,10"/>
+
+                <Image Source="Profile" HeightRequest="80" WidthRequest="80" Aspect="AspectFit" Margin="10,20,20,0" ></Image>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="0" Padding="0.9">
+                <ImageButton Source="penedit" Clicked="editDetails" HorizontalOptions="End" BackgroundColor="Transparent" HeightRequest="15" Margin="270,0,15,5"></ImageButton>
+
+            </StackLayout>
+
+            <ScrollView>
+                <StackLayout Margin="0,20,0,0">
+
+                   
+                    <Frame CornerRadius="15"  BorderColor="#C488FF" BackgroundColor="#E4D2E8" Padding="15" Margin="30,5,30,5" >
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="user" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Name" TextColor="#223A66" FontAttributes="Bold" FontSize="14" FontFamily="Roboto"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="userName" FontAttributes="Bold" TextColor="#223A66" FontSize="12" FontFamily="Roboto"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15"  BorderColor="#C488FF" BackgroundColor="#E4D2E8" Padding="15" Margin="30,5,30,5" >
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="email" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Email" TextColor="#223A66" FontAttributes="Bold" FontSize="14" FontFamily="Roboto"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="userEmail" FontAttributes="Bold" TextColor="#223A66" FontSize="12" FontFamily="Roboto"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15"  BorderColor="#C488FF" BackgroundColor="#E4D2E8" Margin="30,5,30,5" >
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="phone" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Phone no" TextColor="#223A66" FontAttributes="Bold" FontSize="14" FontFamily="Roboto"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="userPhoneNo" FontAttributes="Bold" TextColor="#223A66" FontSize="12" FontFamily="Roboto"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15"  BorderColor="#C488FF" BackgroundColor="#E4D2E8" Margin="30,5,30,5" >
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="calendar" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="DOB" TextColor="#223A66" FontSize="14" FontAttributes="Bold" FontFamily="Roboto"></Label>
+                                <Label Text="xxxxxxxxx" x:Name="userDOB" TextColor="#223A66" FontAttributes="Bold" FontSize="12" FontFamily="Roboto"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="15" Padding="15"  BorderColor="#C488FF" BackgroundColor="#E4D2E8" Margin="30,5,30,5" >
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="placeholder" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" Margin="10"></Image>
+                            <StackLayout >
+                                <Label Text="Address" TextColor="#223A66" FontAttributes="Bold" FontSize="14" FontFamily="Roboto"></Label>
+
+                                <Label Text="xxxxxxxxx" x:Name="userAddress" TextColor="#223A66" FontAttributes="Bold" FontSize="12" FontFamily="Roboto"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

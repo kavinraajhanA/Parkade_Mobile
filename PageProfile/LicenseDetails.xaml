@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.LicenseDetails"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <ImageButton Source="Vector" BackgroundColor="Transparent" Margin="10,5,5,5" ></ImageButton>
+            <Label Text="License Details" FontFamily="Roboto" TextColor="#223A66" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="32" Margin="0,10,20,10"/>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Label Text="License Front View" FontFamily="Robot" TextColor="#223A66" Margin="50,20,5,5" FontSize="24" FontAttributes="Bold" ></Label>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="30,20,30,0">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                            <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Change photo" BackgroundColor="Transparent" Margin="200,0,30,0"  FontSize="Medium" TextColor="#223A66" Clicked="UploadFrontLic"></Button>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="License Rear View" FontFamily="Roboto" TextColor="#223A66" Margin="50,20,5,5" FontAttributes="Bold" FontSize="24"></Label>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="30,20,30,0">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                            <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Change photo" Margin="200,0,30,0" BackgroundColor="Transparent" FontSize="Medium"  Clicked="UploadBackLic" TextColor="#223A66"></Button>
+                    <Label Text="Valid Date" FontFamily="Roboto" TextColor="#223A66" Margin="50,0,5,5" FontSize="Medium"></Label>
+                    <Frame CornerRadius="20" Margin="40,10,40,10"  BorderColor="#C17FFB" Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <DatePicker Date="01-01-2002" Margin="30,0,30,0" HorizontalOptions="Start" x:Name="LicDate"></DatePicker >
+                            <Image Source="calendar" HorizontalOptions="End"></Image>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <Button Text="License Update" Margin="50,10,50,10" FontFamily="Roboto" Font="16" TextColor="White" FontSize="Body" BackgroundColor="#223A66"  Clicked="LicenseUpdate" CornerRadius="15" ></Button>
+
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

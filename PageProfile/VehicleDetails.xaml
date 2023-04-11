@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.VehicleDetails"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="20,30,20,0">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="vector" HorizontalOptions="Start" BackgroundColor="White" Clicked="VehicleBack"></ImageButton>
+                <Label Text="Vehicle Details" TextColor="#223A66" FontSize="32" FontAttributes="Bold" FontFamily="Roboto" Margin="20"></Label>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout Margin="10,30,10,0" >
+                    <StackLayout>
+                        <Label Text="Vehicle Photo (Optional)" FontAttributes="Bold" FontFamily="Roboto"  FontSize="18" Margin="10" TextColor="#223A66"></Label>
+                        <StackLayout >
+                            <Image Source="vehicle" Margin="20,20,0,0"></Image>
+                            <Button Text="Change photo" x:Name="vehicle_photo" HorizontalOptions="CenterAndExpand"  VerticalOptions="End" BackgroundColor="Transparent" Margin="20,0,0,0" FontFamily="Roboto" FontSize="12" Clicked="VehiclePhoto" TextColor="#223A66"></Button>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout>
+
+                        <Label  Text="Vehicle Number(Mandatory)" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BackgroundColor="#E4D2E8"  BorderColor="#C488FF" Padding="5" Margin="15,0,15,0">
+
+                            <Label  Text="Vehicle Number(Mandatory)" Margin="15,0,15,0" FontFamily="Roboto" TextColor="#223A66" FontSize="18"></Label>
+                        </Frame>
+                        <Label  Text="Vehicle Number" Margin="15,0,15,0" FontFamily="Roboto" TextColor="#223A66" FontSize="18" FontAttributes="Bold"></Label>
+                        <Frame CornerRadius="10" BorderColor="#C488FF" BackgroundColor="#E4D2E8" Padding="5" Margin="15,0,15,0">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter Your Vehicle Number" x:Name="Vehicle_num"  HorizontalOptions="FillAndExpand"  FontSize="Small"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout>
+
+                        <Label  Text="Brand Name" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="5" Margin="15,0,15,0">
+
+                            <Label  Text="Brand Name" Margin="15,0,15,0" FontFamily="Roboto" TextColor="#223A66" FontSize="18"></Label>
+                        </Frame>
+                        <Frame CornerRadius="10" BorderColor="#C488FF" BackgroundColor="#E4D2E8" Padding="5" Margin="15,0,15,0">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter Brand Name" x:Name="Brand_name"  HorizontalOptions="FillAndExpand"  FontSize="Small"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+
+                        <Label  Text="Model" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="5" Margin="15,0,15,0">
+
+                            <Label  Text="Model" Margin="15,0,15,0" FontFamily="Roboto" TextColor="#223A66" FontSize="18"></Label>
+                        </Frame>
+                        <Frame CornerRadius="10" BorderColor="#C488FF" BackgroundColor="#E4D2E8" Padding="5" Margin="15,0,15,0">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter Vehicle Model" x:Name="Model_name"  HorizontalOptions="FillAndExpand"  FontSize="Small"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+
+                        <Label  Text="Colour" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="5" Margin="15,0,15,0">
+
+                            <Label  Text="Colour" Margin="15,0,15,0" FontFamily="Roboto" TextColor="#223A66" FontSize="18"></Label>
+                        </Frame>
+                        <Frame CornerRadius="10" BorderColor="#C488FF" BackgroundColor="#E4D2E8" Padding="5" Margin="15,0,15,0">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter Vehicle Colour" x:Name="Vehicle_Clr"  HorizontalOptions="FillAndExpand"  FontSize="Small"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <Button Text="    Continue    " TextColor="White" BackgroundColor="#4E4C7D" CornerRadius="10" Margin="0,30,0,20" Clicked="VehicleContinue" HorizontalOptions="CenterAndExpand"></Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <Button Text="Submit" BackgroundColor="#4E4C7D" TextColor="White" CornerRadius="10" Margin="0,30,0,20" Clicked="VehicleContinue" HorizontalOptions="CenterAndExpand"></Button>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

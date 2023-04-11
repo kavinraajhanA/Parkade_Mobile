@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.Bookhours"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <ImageButton Source="Vector" BackgroundColor="Transparent" Margin="10,5,5,5" HorizontalOptions="Start"  Clicked="parkingDetails"></ImageButton>
+            <Label Text="Hours Booking" Margin="10" FontSize="Large" TextColor="#223A66" FontAttributes="Bold" FontFamily="Roboto"></Label>
+            <StackLayout >
+
+                <Label Text="Offers" FontFamily="Roboto" TextColor="#223A66" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="Title" Margin="10"/>
+
+                <StackLayout>
+                    <ImageButton Source="Vector" BackgroundColor="Transparent" Margin="10,5,5,5" HorizontalOptions="Start"  Clicked="parkingDetails"></ImageButton>
+                    <Label Text="Hours Booking" Margin="20" FontSize="32" TextColor="#223A66" FontAttributes="Bold" FontFamily="Roboto"></Label>
+                    <StackLayout >
+
+                        <Label Text="Offers" FontFamily="Roboto" TextColor="#223A66" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="26" FontAttributes="Bold" Margin="10"/>
+
+                    </StackLayout>
+                    <ScrollView>
+                        <StackLayout>
+
+                            <Label Text="Select booking Hours" FontFamily="Roboto" TextColor="#223A66" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="Title" Margin="10" ></Label>
+                            <Label Text="From" FontFamily="Roboto" TextColor="#223A66" Margin="10" FontSize="Small" HorizontalOptions="Start"  HorizontalTextAlignment="Start" FontAttributes="Bold"></Label>
+
+                            <Label Text="Select booking Hours" FontSize="26" FontAttributes="Bold" FontFamily="Roboto" TextColor="#223A66" HorizontalOptions="Start"  HorizontalTextAlignment="Start"   Margin="10" ></Label>
+                            <Label Text="From" FontFamily="Roboto" TextColor="#223A66" Margin="10" FontSize="20" HorizontalOptions="Start"  HorizontalTextAlignment="Start" FontAttributes="Bold"></Label>
+
+
+                            <Frame CornerRadius="10" Margin="25,10,25,10" BorderColor="#C488FF" Padding="0" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" BackgroundColor="#E4D2E8"  HorizontalOptions="FillAndExpand">
+                                    <TimePicker Time="00:00:00" TextColor="#223A66" Opacity="1" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" VerticalOptions="CenterAndExpand"></TimePicker>
+
+                                    <Image Source="calendar" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" VerticalOptions="CenterAndExpand"></Image>
+
+                                    <Image Source="icon" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" VerticalOptions="CenterAndExpand"></Image>
+
+                                </StackLayout>
+
+                            </Frame>
+
+
+                            <Label Text="To" FontFamily="Roboto" TextColor="#223A66" Margin="10" FontSize="Small" HorizontalOptions="Start"  HorizontalTextAlignment="Start" FontAttributes="Bold"></Label>
+                            <Frame CornerRadius="10" Margin="25,10,25,10" BorderColor="#C488FF"  Padding="0" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" BackgroundColor="#E4D2E8" HorizontalOptions="FillAndExpand">
+                                    <TimePicker Time="00:00:00" TextColor="#223A66" Opacity="1" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" VerticalOptions="CenterAndExpand"></TimePicker>
+                                    <Image Source="calendar" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" VerticalOptions="CenterAndExpand"></Image>
+
+                                    <Label Text="To" FontFamily="Roboto" TextColor="#223A66" Margin="10" FontSize="20" HorizontalOptions="Start"  HorizontalTextAlignment="Start" FontAttributes="Bold"></Label>
+                                    <Frame CornerRadius="10" Margin="25,10,25,10" BorderColor="#C488FF"  Padding="0" HorizontalOptions="FillAndExpand">
+                                        <StackLayout Orientation="Horizontal" BackgroundColor="#E4D2E8" HorizontalOptions="FillAndExpand">
+                                            <TimePicker Time="00:00:00" TextColor="#223A66" Opacity="1" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" VerticalOptions="CenterAndExpand"></TimePicker>
+                                            <Image Source="icon" HeightRequest="25" WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" VerticalOptions="CenterAndExpand"></Image>
+
+                                        </StackLayout>
+
+                                    </Frame>
+
+
+
+
+                                    <Button Text="Submit" FontFamily="Roboto" TextColor="White" BackgroundColor="#4E4C7D" Clicked="PaymentMethod" Margin="90,10,90,10" CornerRadius="15"></Button>
+
+                                    <Button Text="Submit" FontFamily="Roboto" TextColor="White" BackgroundColor="#4E4C7D" Clicked="PaymentMethod" Margin="120,10,120,10" CornerRadius="15"></Button>
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

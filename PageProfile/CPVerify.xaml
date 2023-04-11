@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.CPVerify"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+  <StackLayout >
+        <StackLayout>
+
+            <Label Text="Verification code" FontAttributes="Bold" TextColor="#223A66"  HorizontalOptions="CenterAndExpand" Margin="0,150,0,0"></Label>
+
+            <Image Source="UPotp" HeightRequest="150"  WidthRequest="150" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" ></Image>
+            <Grid HorizontalOptions="FillAndExpand" Margin="50,30,50,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" HeightRequest="5" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" >
+                    <Entry ></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" HeightRequest="5" Grid.Column="1" Grid.Row="0" Margin="0,0,0,0" >
+                    <Entry ></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" HeightRequest="5" Grid.Column="2" Grid.Row="0" Margin="0,0,0,0" >
+                    <Entry ></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" HeightRequest="5" Grid.Column="3" Grid.Row="0" Margin="0,0,0,0" >
+                    <Entry ></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" HeightRequest="5" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0" >
+                    <Entry ></Entry>
+                </Frame>
+                <Frame BorderColor="#C17FFB" CornerRadius="10" HeightRequest="5" Grid.Column="5" Grid.Row="0" Margin="0,0,0,0" >
+                    <Entry ></Entry>
+                </Frame>
+
+            </Grid>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Resend code " Margin="50,30,50,0" HorizontalOptions="StartAndExpand" TextColor="#223A66" ></Label>
+                <Label Text="0.10 " Margin="50,30,50,0" TextColor="#223A66" ></Label>
+            </StackLayout>
+            <Button Text="Use Instead Email " Margin="40,0,50,0" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" TextTransform="None" TextColor="#223A66" ></Button>
+
+            <Button Text="Verify" Clicked="CPverify1" BackgroundColor="#C17FFB" TextColor="#223A66" Margin="60,30,60,0"  CornerRadius="15" FontSize="Micro" ></Button>
+
+
+            <Image Source="UPotp" HeightRequest="323" WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="30,40,0,0" ></Image>
+
+        </StackLayout>
+
+        <Grid>
+            <Image Source="Edesign" Margin="0,10,0,0" Aspect="Fill" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"></Image>
+
+            <StackLayout Margin="30,30,30,0" >
+                <Label Text="Verification Code" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="26" FontFamily="Roboto" TextColor="White" Margin="0,30,0,15"></Label>
+
+                <StackLayout Orientation="Vertical" Margin="0,50,0,0" HorizontalOptions="CenterAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Frame BorderColor="White" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="5" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" >
+                            <Entry ></Entry>
+                        </Frame>
+                        <Frame BorderColor="White" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="5" Grid.Column="1" Grid.Row="0" Margin="0,0,0,0" >
+                            <Entry ></Entry>
+                        </Frame>
+                        <Frame BorderColor="White" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="5" Grid.Column="2" Grid.Row="0" Margin="0,0,0,0" >
+                            <Entry ></Entry>
+                        </Frame>
+                        <Frame BorderColor="White" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="5" Grid.Column="3" Grid.Row="0" Margin="0,0,0,0" >
+                            <Entry ></Entry>
+                        </Frame>
+                        <Frame BorderColor="White" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="5" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0" >
+                            <Entry ></Entry>
+                        </Frame>
+
+
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Resend code " Margin="0,30,0,0"  TextColor="White" ></Label>
+                        <Label Text="00:10 " Margin="0,30,0,0"   TextColor="#C17FFB" ></Label>
+                    </StackLayout>
+
+                    <Button Text="Verify Otp " Clicked="CPverify1"  BackgroundColor="White" TextColor="#223A66" Margin="70,30,70,0"  FontFamily="Roboto" CornerRadius="15" FontSize="14" FontAttributes="Bold" ></Button>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

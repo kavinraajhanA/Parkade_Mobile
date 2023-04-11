@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.CPVerSuccess"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+          <StackLayout>
+        <Label Text="Verification Successfull" FontAttributes="Bold" TextColor="#223A66" FontSize="26"  HorizontalOptions="CenterAndExpand" Margin="0,150,0,0"></Label>
+
+        <Image Source="UPforgetpassword" HeightRequest="250" HorizontalOptions="CenterAndExpand" Margin="40,70,40,40" ></Image>
+
+
+
+
+        <Button Text="Continue" Clicked="CPContinue"  BackgroundColor="#223A66" TextColor="White" FontSize="Medium" Margin="90,60,90,0"  CornerRadius="15"  ></Button>
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

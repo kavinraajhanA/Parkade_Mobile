@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.newPass"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Forgot Password" FontAttributes="Bold" TextColor="#223A66"  HorizontalOptions="CenterAndExpand" Margin="0,150,0,0"></Label>
+
+            <Image Source="forgotpassword" HeightRequest="150" HorizontalOptions="CenterAndExpand" Margin="0,40,0,0" ></Image>
+
+            <StackLayout Margin="30,20,30,0">
+                <Label Text="New Password" TextColor="#223A66" FontSize="Micro"></Label>
+                <Entry x:Name="newpasss" Placeholder="" PlaceholderColor="#223A66"  ></Entry>
+                <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+            </StackLayout>
+            <StackLayout Margin="30,0,30,0">
+                <Label Text="Confirm Password" TextColor="#223A66" FontSize="Micro"></Label>
+                <Entry x:Name="confpass" Placeholder="" PlaceholderColor="#223A66"  ></Entry>
+                <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+            </StackLayout>
+
+
+            <Button Text="Next" Clicked="next" BackgroundColor="#C17FFB" TextColor="#223A66" Margin="30,40,30,0"  CornerRadius="15"  ></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

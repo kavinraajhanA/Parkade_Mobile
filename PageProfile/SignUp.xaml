@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.SignUp"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout >
+                <Label  Text="SIGN IN" FontSize="26" FontAttributes="Bold" TextColor="#223A66" FontFamily="roboto" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" ></Label>
+
+         <StackLayout>
+
+
+
+                    <Label  Text="SIGN IN" FontSize="26" FontAttributes="Bold" TextColor="#223A66" FontFamily="roboto" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" ></Label>
+                    <Label Text="Fill the details" FontSize="22" FontFamily="roboto" TextColor="#223A66" FontAttributes="bold" Margin="30,0,0,0">
+
+                    </Label>
+
+                    <StackLayout Margin="30,0,30,0">
+
+                        <Label Text="Name" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66" x:Name="NameEntry" ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0">
+                        <Label Text="Email" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66" x:Name="EmailEntry" ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0">
+                        <Label Text="Moblie number" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66" x:Name="MobileEntry" ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0">
+                        <Label Text="DOB" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <DatePicker  x:Name="DobEntry"></DatePicker>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0">
+                        <Label Text="Password" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66" x:Name="PassEntry" ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0">
+                        <Label Text="Confirm Password" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66" x:Name="ConfirmpassEntry"  ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0">
+                        <Label Text="Address" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66"  x:Name="AddressEntry"></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0" x:Name="UserDoc1">
+                        <Label Text="Licence Photo" TextColor="#223A66" FontSize="Subtitle" x:Name="LicPicEntry"></Label>
+                        <ImageButton Source="nopictures" Clicked="LicPicUser"></ImageButton>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0" x:Name="LLDoc" IsVisible="False">
+                        <Label Text="Tax Receipt Photo" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66" x:Name="TaxRecEntry" ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout>
+                    <StackLayout Margin="30,0,30,0" x:Name="UserDoc2">
+                        <Label Text="Valid till date (licence)" TextColor="#223A66" FontSize="Subtitle"></Label>
+                        <Entry Placeholder="" PlaceholderColor="#223A66"   ></Entry>
+                        <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+                    </StackLayout> 
+
+
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0" >
+                        <Entry Placeholder="Your Name" PlaceholderColor="#223A66" x:Name="nameEntry" Margin="12,0,0,0" FontSize="16"></Entry>
+                    </Frame>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                        <Entry Placeholder="Your Email" PlaceholderColor="#223A66" x:Name="emailEntry" Margin="12,0,0,0" FontSize="16"></Entry>
+
+                    </Frame>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                        <Entry Placeholder="Your Number" PlaceholderColor="#223A66" x:Name="mobileEntry" Margin="12,0,0,0" FontSize="16"></Entry>
+
+                    </Frame>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                        <DatePicker  x:Name="dobEntry" Margin="12,0,0,0" FontSize="16"></DatePicker>
+
+                    </Frame>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                        <Entry Placeholder="Your Password" PlaceholderColor="#223A66" x:Name="passEntry" Margin="12,0,0,0" FontSize="16"></Entry>
+
+                    </Frame>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                        <Entry Placeholder="Confirm Password" PlaceholderColor="#223A66" x:Name="confirmpassEntry" Margin="12,0,0,0" FontSize="16"></Entry>
+
+                    </Frame>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                        <Entry Placeholder="Your Address" PlaceholderColor="#223A66"  x:Name="addressEntry" Margin="12,0,0,0" FontSize="16"></Entry>
+
+
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Text="Are you a Landlord?" TextColor="#223A66" HorizontalOptions="EndAndExpand" Margin="30,10,20,0"  ></Label>
+                        <Switch IsToggled="False" Margin="0,10,25,0"  ></Switch>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Upload Licence Photo(Front)" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="0,20,0,0">
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                                <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+
+                        </Frame>
+                        <Label Text="Upload Licence Photo(Rear)" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="0,20,0,0">
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                                <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+
+                        </Frame>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                            <Entry Placeholder="Valid Till Date(License)" PlaceholderColor="#223A66"   Margin="12,0,0,0" FontSize="16"></Entry>
+
+
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout IsVisible="True">
+                        <Label Text="Upload Land Tax Photo" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="0,20,0,0">
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+                                <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                                <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+
+                        </Frame>
+
+                    </StackLayout>
+
+
+
+                    <Button Text="Create Account" BackgroundColor="#223A66" TextColor="White" CornerRadius="10" Margin="60,20,60,0" ></Button>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="Already have an account?"  FontSize="Small" TextColor="#223A66"  Margin="30,13,0,0" ></Label>
+                        <Button Text="SIGN IN" FontSize="Small"  TextColor="#223A66" BackgroundColor="Transparent"   ></Button>
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+
+
+
+
+            </StackLayout>
+
+
+
+            </StackLayout>
+        </ScrollView>
+  
+    
+    </ContentPage.Content>
+</ContentPage>

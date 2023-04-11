@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.ChangePWord"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+      
+      <StackLayout >
+
+            <Image Source="forgotpassword" HeightRequest="150" WidthRequest="150" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" Margin="0,40,0,0" ></Image>
+
+            <StackLayout Margin="30,20,30,0">
+                <Label Text="New Password" TextColor="#223A66" FontSize="Micro"></Label>
+                <Entry Placeholder="" PlaceholderColor="#223A66"  ></Entry>
+                <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+            </StackLayout>
+            <StackLayout Margin="30,0,30,0">
+                <Label Text="Confirm Password" TextColor="#223A66" FontSize="Micro"></Label>
+                <Entry Placeholder="" PlaceholderColor="#223A66"  ></Entry>
+                <BoxView HeightRequest="4" Color="#223A66" ></BoxView>
+            </StackLayout>
+
+
+            <Button Text="Save" Clicked="prevEdit" BackgroundColor="#C17FFB" TextColor="#223A66" Margin="30,40,30,0"  CornerRadius="15"  ></Button>
+
+=======
+            <Image Source="UPforgetpassword" HeightRequest="259" WidthRequest="220" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="40,40,0,0" ></Image>
+>>>>>>> 0a7a2ffb83f192a3c6ada0eb196ae5dc86471f78
+        </StackLayout>
+
+        <Grid>
+            <Image Source="Edesign" Margin="0,10,0,0" Aspect="Fill" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"></Image>
+
+
+            <StackLayout Margin="30,30,30,0" >
+                <Label Text="Change Password" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="26" FontFamily="Roboto" TextColor="White" Margin="20"></Label>
+
+
+                <Frame BorderColor="White" CornerRadius="10" BackgroundColor="Transparent" HeightRequest="40" Margin="0,50,0,0" Padding="0">
+                    <Entry Placeholder="New password" x:Name="emailchecked" PlaceholderColor="White"  VerticalOptions="Center" Margin="12,0,0,0" ></Entry>
+                </Frame>
+                <Frame BorderColor="White" CornerRadius="10" BackgroundColor="Transparent" HeightRequest="40" Margin="0,10,0,0"  Padding="0" >
+                    <Entry Placeholder="Confirm password" x:Name="password"  PlaceholderColor="White"   Margin="12,0,0,0"  ></Entry>
+
+                </Frame>
+                <Button Margin="0,50,0,50" HorizontalOptions="CenterAndExpand" Text="Submit" FontFamily="Roboto" FontAttributes="Bold" FontSize="14" BackgroundColor="White" TextColor="#223A66" CornerRadius="10"  HeightRequest="40" WidthRequest="105">
+
+                </Button>
+
+
+
+            </StackLayout>
+
+        </Grid>
+
+
+    </StackLayout>
+
+         
+    </ContentPage.Content>
+</ContentPage>

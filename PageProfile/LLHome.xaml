@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.LLHome"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+      <StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="15,10,0,0">
+            <StackLayout Orientation="Horizontal"  WidthRequest="20"  Grid.Column="0">
+                <ImageButton Source="hamburger" HeightRequest="30"   BackgroundColor="Transparent" ></ImageButton>
+                <ImageButton Source="Notifications" HeightRequest="30" BackgroundColor="Transparent" Margin="4,0,0,0"></ImageButton>
+
+
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Margin="100,20,0,0"  Grid.Column="1" Padding="0" Spacing="0" >
+                <Label Text="Hello" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="24" FontFamily="roboto" TextColor="#223A66"  ></Label>
+                <Label Text="Kowshikraj!"  FontSize="20"  FontFamily="roboto" TextColor="#C488FF"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Margin="10,17,10,0" HorizontalOptions="End"  >
+                <Image Source="profile" HeightRequest="70" Aspect="AspectFit" HorizontalOptions="EndAndExpand"></Image>
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,230,0,0">
+            <ImageButton Source="add" BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100" Clicked="LandInfo" ></ImageButton>
+            <Label Text="Add Land" HorizontalOptions="Center" FontSize="24" TextColor="#223A66" FontFamily="Roboto" FontAttributes="Bold"></Label>
+        </StackLayout>
+
+
+    </StackLayout>
+      
+       
+    </ContentPage.Content>
+</ContentPage>

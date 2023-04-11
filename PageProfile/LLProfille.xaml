@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.LLProfille"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="Vector" BackgroundColor="Transparent" Margin="10,5,5,5" Clicked="LLhome"></ImageButton>
+                <Label Text="Profile" TextColor="#223A66" FontFamily="poppins" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" Margin="0,10,20,10"/>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Image Source="ProfileGirl" Margin="10" ></Image>
+                    <Label Text="Marina" TextColor="#223A66" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="xxxxxxxxxx" TextColor="#C17FFB" FontSize="Caption" FontAttributes="None" HorizontalOptions="CenterAndExpand"></Label>
+
+                   
+
+                    <!--Personal Details-->
+                    <Frame CornerRadius="15" Padding="15" BackgroundColor="#F1F1F1" Margin="75,10,75,10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LLPersonalDetails_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="personaldata" HorizontalOptions="StartAndExpand"></Image>
+                            <Label Text="Personal Details" TextColor="#223A66" FontSize="Small" HorizontalOptions="CenterAndExpand" FontFamily="poppins"></Label>
+                            <Image Source="downarrow" HorizontalOptions="EndAndExpand"></Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Booking Details-->
+                    <Frame CornerRadius="15" Padding="15" BackgroundColor="#F1F1F1" Margin="75,10,75,10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LLBookingDetails_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="booking" HorizontalOptions="StartAndExpand"></Image>
+                            <Label Text="Booking Details" TextColor="#223A66" FontSize="Small" HorizontalOptions="CenterAndExpand" FontFamily="poppins"></Label>
+                            <Image Source="downarrow" HorizontalOptions="EndAndExpand"></Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Land Details-->
+                    <Frame CornerRadius="15" Padding="15" BackgroundColor="#F1F1F1" Margin="75,10,75,10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LLLandDetails_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="details" HorizontalOptions="StartAndExpand"></Image>
+                            <Label Text="Land Details" TextColor="#223A66" FontSize="Small" HorizontalOptions="CenterAndExpand" FontFamily="poppins"></Label>
+                            <Image Source="downarrow" HorizontalOptions="EndAndExpand"></Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Bank Details-->
+                    <Frame CornerRadius="15" Padding="15" BackgroundColor="#F1F1F1" Margin="75,10,75,10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LLBankDetails_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="premium" HorizontalOptions="StartAndExpand"></Image>
+                            <Label Text="Bank Details" TextColor="#223A66" FontSize="Small" HorizontalOptions="CenterAndExpand" FontFamily="poppins"></Label>
+                            <Image Source="downarrow" HorizontalOptions="EndAndExpand"></Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--Logout-->
+                    <Frame CornerRadius="15" Padding="15" BackgroundColor="#F1F1F1" Margin="75,10,75,10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LLLogOut"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Image Source="logout" HorizontalOptions="StartAndExpand"></Image>
+                            <Label Text="Logout" TextColor="#223A66" FontSize="Small" HorizontalOptions="CenterAndExpand" FontFamily="poppins"></Label>
+                            <Image Source="downarrow" HorizontalOptions="EndAndExpand"></Image>
+                        </StackLayout>
+                    </Frame>
+
+
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

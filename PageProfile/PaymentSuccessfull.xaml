@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.PaymentSuccessfull" 
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20,30,20,20">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="vector" HorizontalOptions="Start" BackgroundColor="White"></ImageButton>
+                    <Label Text="Payment Success!" TextColor="#223A66" FontSize="32" FontAttributes="Bold" FontFamily="Roboto" Margin="10"></Label>
+                </StackLayout>
+                <StackLayout Margin="0,0,0,0" >
+                    <Image Source="Paymentsuccess" HorizontalOptions="CenterAndExpand" HeightRequest="300" WidthRequest="200"></Image>
+                    <Label Text="Time left for cancel  booking" TextColor="Black" FontSize="20" FontAttributes="Bold" FontFamily="Roboto" Margin="0,230,0,0" HorizontalOptions="CenterAndExpand"></Label>
+                    <Frame BackgroundColor="#C17FFB" Padding="8" CornerRadius="5">
+                        <ProgressBar x:Name="OTPProgress" ProgressColor="#223A66"  HorizontalOptions="FillAndExpand" ></ProgressBar></Frame>
+                    
+                    <StackLayout  Orientation="Horizontal">
+                        <Label Text="" FontSize="Large" Margin="25" TextColor="#223A66" x:Name="TimerLabel"></Label>
+                        <Frame CornerRadius="10" Margin="50,10,0,50"  Padding="5" HorizontalOptions="EndAndExpand" BorderColor="#FF0000">
+                            <Button  Text="Cancel Booking" FontAttributes="Bold" FontFamily="Roboto" BackgroundColor="Transparent" FontSize="18" TextColor="#FF0000"></Button>
+                        </Frame>
+
+                    </StackLayout>
+                    <Button TextColor="White" BackgroundColor="#4E4C7D" CornerRadius="10" Text="Back to Home" Clicked="BackToHome" FontFamily="Roboto" FontSize="20" VerticalOptions="EndAndExpand"></Button>
+                </StackLayout>
+               
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

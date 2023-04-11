@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.LandInfo"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" Margin="15,20,0,0">
+                    <ImageButton Source="Vector" BackgroundColor="Transparent" HorizontalOptions="Start" WidthRequest="20" Clicked="LLhome"></ImageButton>
+                    <Label Text="Land Details" TextColor="#223A66"  HorizontalTextAlignment="Start" Margin="30,0,0,0" HorizontalOptions="StartAndExpand" FontSize="32" FontAttributes="Bold" FontFamily="Roboto"/>
+                </StackLayout>
+
+
+
+
+                <StackLayout Margin="30,20,30,0">
+                    <StackLayout>
+                        <Label Text="Add Land Photo" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="0,20,0,0">
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+                                <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                                <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                            </StackLayout>
+
+                        </Frame>
+
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Add Proof Photo" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="0,20,0,0">
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+                                <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                                <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+
+                            </StackLayout>
+                        </Frame>
+
+
+
+                        <StackLayout Margin="30,20,10,0">
+                                <StackLayout>
+                                    <Label Text="Land Photo" TextColor="#223A66" FontSize="18" ></Label>
+                                    <Frame CornerRadius="25" BackgroundColor="#D9D9D9">
+                                        <Image Source="nopictures"></Image>
+                                    </Frame>
+
+                                    <Button Text="Add photo" TextColor="#223A66" Clicked="LandPic" FontSize="10" BackgroundColor="Transparent" HorizontalOptions="End"></Button>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Land Tax Photo" TextColor="#223A66" FontSize="18" ></Label>
+                                    <Frame CornerRadius="25" BackgroundColor="#D9D9D9">
+                                        <Image Source="nopictures"></Image>
+                                    </Frame>
+                                    <Button Text="Add photo" TextColor="#223A66" FontSize="10" Clicked="LandTaxPic" BackgroundColor="Transparent" HorizontalOptions="End"></Button>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Add Another Proof" TextColor="#223A66" FontSize="18" ></Label>
+                                    <Frame CornerRadius="25" BackgroundColor="#D9D9D9">
+                                        <Image Source="nopictures"></Image>
+                                    </Frame>
+                                    <Button Text="Add photo" TextColor="#223A66" Clicked="AnotherLandProofPic" FontSize="10" BackgroundColor="Transparent" HorizontalOptions="End"></Button>
+                                </StackLayout>
+                            </StackLayout>
+                        
+
+
+
+
+
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Add Another Proof Photo" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                    <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" HeightRequest="150" Padding="0" CornerRadius="28"  Margin="0,20,0,0">
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+                            <ImageButton Source="Upload"  CornerRadius="100" Margin="138,0,138,0" BackgroundColor="#E4D2E8"></ImageButton>
+                            <Label Text="Upload From Gallery" HorizontalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+
+                        </Frame>
+
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Address Line 1" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                            <Entry Placeholder="Your Address Line 1" PlaceholderColor="#223A66"   Margin="12,0,0,0" FontSize="16"></Entry>
+
+
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Address Line 2" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                            <Entry Placeholder="Your Address Line 2" PlaceholderColor="#223A66"   Margin="12,0,0,0" FontSize="16"></Entry>
+
+
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout  Margin="0,20,0,0" >
+                        <StackLayout Margin="0,0,70,0">
+                            <Label Text="City" TextColor="#223A66" FontSize="22" FontFamily="Roboto" FontAttributes="Bold" >
+
+                            </Label>
+
+                            <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="10" Padding="0">
+                                <Entry Keyboard="Numeric" x:Name="slotentry"></Entry>
+                            </Frame>
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" >
+                                <Picker  SelectedItem="{Binding TravelBy}" Title="Your City" FontSize="12" HeightRequest="40">
+                                    <Picker.Items>
+                                        <x:String>Hello</x:String>
+                                        <x:String>Hello</x:String>
+                                        <x:String>Hello</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                            </Frame>
+                        </StackLayout>
+
+                        <Grid>
+                            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                <StackLayout Margin="0,0,70,0" Grid.Row="0" Grid.Column="0">
+                                    <Label Text="Price per Hour"  TextColor="#223A66" FontSize="18" >
+
+                                    </Label>
+                                    <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="10" Padding="0">
+                                        <Entry Keyboard="Numeric" x:Name="phourentry"></Entry>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout  Grid.Row="0" Grid.Column="1" >
+                                    <Label Text="Price per day" TextColor="#223A66" FontSize="18" >
+
+                                    </Label>
+                                    <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="10" Padding="0" >
+                                        <Entry Keyboard="Numeric" x:Name="pdayentry"></Entry>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+
+
+                            <StackLayout  Margin="0,20,0,0" Grid.Row="1" Grid.Column="0">
+                                <StackLayout Margin="0,0,70,0">
+                                    <Label Text="Land SIze" TextColor="#223A66" FontSize="18" >
+
+                                    </Label>
+                                    <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="10" Padding="0" >
+                                        <Entry Placeholder="sqr ft" Keyboard="Numeric"></Entry>
+                                    </Frame>
+                                </StackLayout>
+
+                            </StackLayout>
+
+
+                        </Grid>
+
+                        <StackLayout Orientation="Vertical" Margin="0,30,0,0">
+                            <Label Text="Plan Details" TextColor="#223A66" FontSize="18"></Label>
+                            <!--1 Month-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="1 Month" TextColor="#223A66" FontSize="18" Margin="0,10,0,0"></Label>
+                                <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="100" Padding="0" Margin="30,0,0,0" HeightRequest="40">
+                                    <StackLayout>
+                                        <Image></Image>
+                                        <Entry x:Name="onemnth"></Entry>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            <!--3 Month-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="3 Month" TextColor="#223A66" FontSize="18" Margin="0,10,0,0"></Label>
+                                <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="100" Padding="0" Margin="30,0,0,0" HeightRequest="40">
+                                    <StackLayout>
+                                        <Image></Image>
+                                        <Entry WidthRequest="50" x:Name="threemnth"></Entry>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+                            <!--6 Month-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="6 Month" TextColor="#223A66" FontSize="18" Margin="0,10,0,0"></Label>
+                                <Frame BorderColor="#223A66" CornerRadius="10" BackgroundColor="Transparent" WidthRequest="100" Padding="0"  Margin="30,0,0,0" HeightRequest="40">
+                                    <StackLayout>
+                                        <Image></Image>
+                                        <Entry x:Name="sixmnth"></Entry>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+                        <Label Text="Features" TextColor="#223A66" FontSize="Medium" Margin="0,20,0,0"></Label>
+
+                        <StackLayout>
+                            <TableView Intent="Settings">
+                                <TableRoot>
+                                    <TableSection >
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+
+                                                <Image Source="securitycamera"  ></Image>
+                                                <Label  Text="CCTV" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                                <CheckBox  HorizontalOptions="EndAndExpand" x:Name="CCTV"></CheckBox>
+
+                                            </StackLayout>
+
+
+                                        </ViewCell>
+                                    </TableSection>
+
+                                    <TableSection >
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                                <Image Source="secure"  ></Image>
+                                                <Label  Text="Security" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                                <CheckBox x:Name="security" HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                            </StackLayout>
+
+
+                                        </ViewCell>
+                                    </TableSection>
+
+                                    <TableSection >
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                                <Image Source="siren"  ></Image>
+                                                <Label  Text="Alarm" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                                <CheckBox  x:Name="Alarm"  HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                            </StackLayout>
+
+
+                                        </ViewCell>
+                                    </TableSection>
+
+                                    <TableSection >
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                                <Image Source="fireextinguisher"  ></Image>
+                                                <Label  Text="Fire Extinguisher" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                                <CheckBox  x:Name="FireExtinguish" HorizontalOptions="EndAndExpand" ></CheckBox>
+
+                                            </StackLayout>
+
+
+                                        </ViewCell>
+                                    </TableSection>
+
+                                    <TableSection >
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                                <Image Source="hours"  ></Image>
+                                                <Label  Text="24/7" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                                <CheckBox  x:Name="fullDay"  HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                            </StackLayout>
+
+
+                                        </ViewCell>
+                                    </TableSection>
+
+                                </TableRoot>
+                            </TableView>
+
+
+
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Button Text="Submit" BackgroundColor="#C17FFB" TextColor="#223A66" CornerRadius="10" Margin="50" FontFamily="poppins" FontSize="15" Clicked="LandDetails"></Button>
+
+                        </StackLayout>
+
+
+
+
+
+
+=======
+>>>>>>> 0a7a2ffb83f192a3c6ada0eb196ae5dc86471f78
+                </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="State" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0" WidthRequest="130">
+
+                                <Picker  SelectedItem="{Binding TravelBy}" Title="Your State" FontSize="12" HeightRequest="40">
+                                    <Picker.Items>
+                                        <x:String>Hello</x:String>
+                                        <x:String>Hello</x:String>
+                                        <x:String>Hello</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout HorizontalOptions="EndAndExpand">
+                            <Label Text="Postal Code" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0" WidthRequest="130">
+
+                                <Entry Keyboard="Numeric" WidthRequest="130" HeightRequest="40"></Entry>
+
+
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout  Margin="0,20,0,0" >
+                        <StackLayout Margin="0,0,70,0">
+                            <Label Text="Country" TextColor="#223A66" FontSize="22" FontFamily="Roboto" FontAttributes="Bold" >
+
+                            </Label>
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" >
+                                <Picker  SelectedItem="{Binding TravelBy}" Title="Your Country" FontSize="12" HeightRequest="40">
+                                    <Picker.Items>
+                                        <x:String>Hello</x:String>
+                                        <x:String>Hello</x:String>
+                                        <x:String>Hello</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Available Slots" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" Margin="0,20,0,0">
+                            <Entry Placeholder="Your Available Slots" PlaceholderColor="#223A66"   Margin="12,0,0,0" FontSize="16"></Entry>
+
+
+                        </Frame>
+                    </StackLayout>
+                    <Label Text="Price" TextColor="#223A66" FontSize="22" FontFamily="roboto" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                    <StackLayout Orientation="Horizontal">
+
+                        <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+
+                            <Label Text="Price per Hour" TextColor="#223A66" FontSize="18" FontFamily="roboto"  Margin="0,20,0,0" >
+
+                            </Label>
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11">
+                                <Entry Keyboard="Numeric"></Entry>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Margin="70,0,0,0"  Orientation="Vertical">
+
+                            <Label Text="Price per Day" TextColor="#223A66" FontSize="18" FontFamily="roboto"  Margin="0,20,0,0" >
+
+                            </Label>
+                            <Frame  BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11">
+                                <Entry Keyboard="Numeric"></Entry>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout  Margin="0,20,0,0" >
+                        <StackLayout Margin="0,0,70,0">
+                            <Label Text="Land Size" TextColor="#223A66" FontSize="22" FontFamily="Roboto" FontAttributes="Bold" >
+
+                            </Label>
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF" Padding="0" CornerRadius="11" >
+                                <Entry Placeholder="sqr ft" Keyboard="Numeric"></Entry>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Margin="0,30,0,0">
+                        <Label Text="Plan Details" TextColor="#223A66" FontSize="22" FontFamily="Roboto" FontAttributes="Bold"></Label>
+                        <!--1 Month-->
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="1 Month" TextColor="#223A66" FontSize="18" Margin="0,10,0,0"></Label>
+
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF"  CornerRadius="11" WidthRequest="150" Padding="0" Margin="30,0,0,0" HeightRequest="50" >
+
+                                <StackLayout >
+                                    <Image></Image>
+                                    <Entry Placeholder="sqr ft" Keyboard="Numeric"></Entry>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <!--3 Month-->
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="3 Month" TextColor="#223A66" FontSize="18" Margin="0,10,0,0"></Label>
+
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF"  CornerRadius="11" WidthRequest="150" Padding="0" Margin="30,0,0,0" HeightRequest="50" >
+
+                                <StackLayout >
+                                    <Image></Image>
+                                    <Entry Placeholder="sqr ft" Keyboard="Numeric"></Entry>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <!--6 Month-->
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="6 Month" TextColor="#223A66" FontSize="18" Margin="0,10,0,0"></Label>
+
+                            <Frame BackgroundColor="#E4D2E8" BorderColor="#C488FF"  CornerRadius="11" WidthRequest="150" Padding="0" Margin="30,0,0,0" HeightRequest="50" >
+
+                                <StackLayout >
+                                    <Image></Image>
+                                    <Entry Placeholder="sqr ft" Keyboard="Numeric"></Entry>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+                    <Label Text="Features" TextColor="#223A66" FontAttributes="Bold" FontSize="22" Margin="0,20,0,0"></Label>
+
+                    <StackLayout HeightRequest="400">
+                        <TableView Intent="Settings">
+                            <TableRoot>
+                                <TableSection >
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+
+                                            <Image Source="securitycamera"  ></Image>
+                                            <Label  Text="CCTV" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                            <CheckBox  HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                        </StackLayout>
+
+
+                                    </ViewCell>
+                                </TableSection>
+
+                                <TableSection >
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                            <Image Source="secure"  ></Image>
+                                            <Label  Text="Security" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                            <CheckBox  HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                        </StackLayout>
+
+
+                                    </ViewCell>
+                                </TableSection>
+
+                                <TableSection >
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                            <Image Source="siren"  ></Image>
+                                            <Label  Text="Alarm" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                            <CheckBox  HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                        </StackLayout>
+
+
+                                    </ViewCell>
+                                </TableSection>
+
+                                <TableSection >
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                            <Image Source="fireextinguisher"  ></Image>
+                                            <Label  Text="Fire Extinguisher" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                            <CheckBox  HorizontalOptions="EndAndExpand" ></CheckBox>
+
+                                        </StackLayout>
+
+
+                                    </ViewCell>
+                                </TableSection>
+
+                                <TableSection >
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <!--<Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="Center" BorderColor="#C17FFB" BackgroundColor="Transparent">
+                                               
+                                            </Frame>-->
+                                            <Image Source="hours"  ></Image>
+                                            <Label  Text="24/7" TextColor="#223A66" VerticalTextAlignment="Center"></Label>
+                                            <CheckBox  HorizontalOptions="EndAndExpand"></CheckBox>
+
+                                        </StackLayout>
+
+
+                                    </ViewCell>
+                                </TableSection>
+
+
+
+                            </TableRoot>
+                        </TableView>
+
+                        <Button Text="Submit" WidthRequest="160" HeightRequest="40" BackgroundColor="#4E4C7D" TextColor="White" CornerRadius="10" HorizontalOptions="CenterAndExpand" FontFamily="poppins" FontSize="15" Clicked="LandDetails" Margin="0,0,0,10"></Button>
+
+                    </StackLayout>
+
+
+
+                
+
+
+
+            </StackLayout>
+
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+      
+    </ContentPage.Content>
+</ContentPage>

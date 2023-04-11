@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.BookingConfirmation"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+       <StackLayout Margin="15,10,15,20">
+        <StackLayout Orientation="Horizontal">
+            <ImageButton Source="vector" HorizontalOptions="Start" HeightRequest="18" Clicked="BookingConfirmBack" BackgroundColor="White"></ImageButton>
+            <Label Text="Booking Confirmation" TextColor="#223A66" FontSize="26" FontAttributes="Bold"  FontFamily="Roboto" Margin="20"></Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout >
+                <Frame BackgroundColor="#EAD1FF" HeightRequest="60" CornerRadius="20" Margin="0,0,0,0">
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Vertical">
+
+                            <Label Text="Happy Camper Lot" TextColor="#223A66" FontFamily="Roboto" FontAttributes="Bold" FontSize="20"></Label>
+                            <Label Text="Ammapayam,Salem" TextColor="#223A66" FontFamily="Roboto" FontSize="15"></Label>
+                            
+
+                        </StackLayout>
+                        <StackLayout>
+                            <Image Source="bookinglocation"  HeightRequest="34" Margin="65,10,0,0"></Image>
+                        </StackLayout>
+                    </StackLayout>
+                   
+
+                    
+                </Frame>
+
+            </StackLayout>
+
+
+
+        </ScrollView>
+        <Button TextColor="White" BackgroundColor="#4E4C7D" CornerRadius="10" Text="Continue" HeightRequest="50" Margin="100,0,100,0" FontFamily="Roboto"  FontSize="14" Clicked="BookConfirmContinue" VerticalOptions="EndAndExpand"></Button>
+
+
+    </StackLayout>
+
+         
+    </ContentPage.Content>
+</ContentPage>

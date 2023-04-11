@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns:pages="http://rotorgames.com" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.Popup.NavigationDrawer" WidthRequest="200"
+    CloseWhenBackgroundIsClicked="False">
+    <pages:PopupPage.Animation>
+        <pages:ScaleAnimation 
+            PositionIn="Left"
+            PositionOut="Left"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#223A66" Margin="0,0,100,0">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0" Margin="0,20,0,0">
+                    <Label Text="Menu" FontSize="Large" FontAttributes="Bold" Margin="20,0,0,0"
+                   TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand"/>
+                    <ImageButton Source="close" Clicked="Navigation_Close_Btn_Clicked" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,20,0"></ImageButton>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,0,190">
+                    <Button Text="Customer Care" TextColor="White" FontAttributes="None" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontFamily="poppins"></Button>
+                    <Button Text="Privacy Policy" TextColor="White" FontAttributes="None" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontFamily="poppins"></Button>
+                    <Button Text="App info" TextColor="White" FontAttributes="None" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontFamily="poppins"></Button>
+                    <Button Text="Cancellation policy" TextColor="White" FontAttributes="None" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontFamily="poppins"></Button>
+                    <Button Text="Terms and Conditions" TextColor="White" FontAttributes="None" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontFamily="poppins"></Button>
+                    <Button Text="Refund policy" TextColor="White" FontAttributes="None" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontFamily="poppins"></Button>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+      
+    </ContentPage.Content>
+</pages:PopupPage>
+    

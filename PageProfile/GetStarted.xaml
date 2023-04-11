@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.GetStarted"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <CarouselView Margin="0" IndicatorView="Indicator" x:Name="SlidersList">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <StackLayout Orientation="Vertical" Spacing="0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="ellipse1" Grid.Row="0" Aspect="AspectFit" HeightRequest="520" WidthRequest="740" HorizontalOptions="StartAndExpand"  Margin="0,0,0,0"></Image>
+                                    <Image Source="{Binding ImageUrl}" Grid.Row="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"></Image>
+
+                                </Grid>
+                            </StackLayout>
+
+                            <Label Text="{Binding Title}" TextColor="#223A66" FontAttributes="Bold" FontSize="Large" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" ></Label>
+                            <Label  Text="{Binding Description}" TextColor="#223A66" FontAttributes="None" FontSize="Small" HorizontalTextAlignment="Center"></Label>
+                            <Button Text="{Binding ButtonText}" IsVisible="{Binding IsButtonVisible}" Clicked="logopage" TextColor="White" BackgroundColor="#223A66" Margin="150,70,150,90" HorizontalOptions="CenterAndExpand"></Button>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView SelectedIndicatorColor="#223A66" IndicatorColor="Gray" x:Name="Indicator" IndicatorsShape="Square" IndicatorSize="10">
+            </IndicatorView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

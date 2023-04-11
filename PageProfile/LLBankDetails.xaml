@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PageProfile.LLBankDetails"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="Vector" BackgroundColor="Transparent" Margin="10,5,5,5" Clicked="PrevProfilePage"></ImageButton>
+                <Label Text="Bank Details" FontFamily="poppins" TextColor="#223A66" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" Margin="0,10,20,10"/>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Bank Name" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BorderColor="#223A66" Padding="5" Margin="15,0,15,0">
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter your bank name" x:Name="Bank_Name"  HorizontalOptions="FillAndExpand"></Entry>
+                                <Button Text="edit" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"></Button>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Account Holder Name" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BorderColor="#223A66" Padding="5" Margin="15,0,15,0">
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter Account Holder Name" x:Name="Acc_Holder_Name" HorizontalOptions="FillAndExpand" ></Entry>
+                                
+                                <Button Text="edit" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"></Button>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Card Number" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BorderColor="#223A66" Padding="5" Margin="15,0,15,0">
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter your Card Number" x:Name="Card_Number" HorizontalOptions="FillAndExpand" ></Entry>
+                              
+                                <Button Text="edit" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"></Button>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Account Number" Margin="15,0,15,0" FontFamily="poppins" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BorderColor="#223A66" Padding="5" Margin="15,0,15,0">
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter your Account Number" x:Name="Acc_Num" HorizontalOptions="FillAndExpand" ></Entry>
+                                <Button Text="edit" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"></Button>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="IFSC Code" FontFamily="poppins" Margin="15,0,15,0" TextColor="#223A66" FontSize="Medium"></Label>
+                        <Frame CornerRadius="10" BorderColor="#223A66" Padding="5" Margin="15,0,15,0">
+                            <StackLayout Orientation="Horizontal">
+                                <Entry  Placeholder="Enter IFSC Code" x:Name="IFSC_Code" HorizontalOptions="FillAndExpand"></Entry>
+                                <Button Text="edit" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"></Button>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Button Text="Submit" BackgroundColor="#C17FFB" TextColor="#223A66" CornerRadius="10" Margin="50" FontFamily="poppins" FontSize="15" Clicked="Submit"></Button>
+                    </StackLayout>
+                </StackLayout>
+               
+            </ScrollView>
+          
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>
